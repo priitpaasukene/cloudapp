@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - lab3pelle2024
+name: Build and deploy Python app to Azure Web App - pp-flask-github
 
 on:
   push:
@@ -65,14 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_046269B636964741B203EA97D54B67CA }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_ACC3E35E6EA74760859A61B853E6758D }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_FB43EA2F07354B1BBD715EE0D5CC927C }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_B36F8533676A4402974299D9C211BD5E }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_DE44DD5285AE437E802DAE09C27465A0 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_DCAEF2CAA38B434EB283DEC0EAA6E229 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'lab3pelle2024'
+          app-name: 'pp-flask-github'
           slot-name: 'Production'
           
