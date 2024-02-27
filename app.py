@@ -20,7 +20,7 @@ def append_message_to_file(content):
         'timestamp': datetime.now().isoformat(" ", "seconds")
     }
     data['messages'].append(new_message)
-    with open('data.json', mode='w') as messages_file:
+    with open('/mnt/data.json', mode='w') as messages_file:
         json.dump(data, messages_file)
 
 
